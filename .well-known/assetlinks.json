@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "app.shlv.shlv",
+    "sha256_cert_fingerprints": [
+      "72:FD:69:61:2A:0A:42:B3:A5:A1:35:0A:4E:5E:05:27:99:82:33:04:C6:67:D9:9B:C4:12:17:57:AB:7F:2F:43"
+    ]
+  }
+}]
