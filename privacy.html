@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Privacy Policy — SHLV</title>
+<meta name="description" content="How SHLV collects, uses, and protects your data. Local-first inventory, optional Google sign-in for Pro features, GDPR-compliant." />
+<link rel="canonical" href="https://shlv.app/privacy.html" />
+<meta name="robots" content="index, follow" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #0E1014;
+  --paper-2: #14171D;
+  --card: #1A1D25;
+  --ink: #F5EEDF;
+  --ink-2: #E5DECF;
+  --ink-3: #A6A296;
+  --ink-4: #6B6860;
+  --rule: #2A2D35;
+  --tape: #26272E;
+  --brand: #2B6BEF;
+  --brand-2: #1FB0F0;
+  --accent: #E85A24;
+
+  --font-display: 'Inter Tight', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --maxw: 820px;
+  --gutter: 28px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule); text-decoration-thickness: 1px; }
+a:hover { text-decoration-color: var(--ink); }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.wrap-wide {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* NAV */
+.nav {
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in oklab, var(--paper) 90%, transparent);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  position: sticky; top: 0; z-index: 50;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: 18px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand-mark {
+  width: 22px; height: 22px;
+  position: relative;
+}
+.brand-mark::before, .brand-mark::after {
+  content: ""; position: absolute; width: 16px; height: 7px;
+}
+.brand-mark::before { top: 3px; left: 0; background: var(--brand); }
+.brand-mark::after  { bottom: 3px; right: 0; background: var(--brand-2); }
+.back-link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  text-decoration: none;
+}
+.back-link:hover { color: var(--ink); }
+
+/* HEADER */
+.doc-header {
+  padding: 72px 0 48px;
+  border-bottom: 1px solid var(--rule);
+}
+.doc-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.doc-kicker::before {
+  content: "";
+  width: 22px; height: 1px;
+  background: var(--ink-3);
+}
+.doc-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(44px, 6vw, 72px);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  margin: 0 0 22px;
+  text-wrap: balance;
+}
+.doc-lede {
+  font-size: 19px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  max-width: 62ch;
+  margin: 0 0 22px;
+  text-wrap: pretty;
+}
+.doc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.doc-meta strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 500;
+  margin-top: 4px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-family: var(--font-body);
+  font-size: 13px;
+}
+
+/* SUMMARY CARD */
+.summary {
+  margin: 40px 0 24px;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 28px 32px;
+}
+.summary ul {
+  margin: 0; padding: 0 0 0 0; list-style: none;
+  display: grid; gap: 12px;
+}
+.summary li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+.summary li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 9px;
+  width: 16px; height: 2px;
+  background: var(--brand);
+}
+.summary strong { color: var(--ink); font-weight: 600; }
+
+/* DOC BODY */
+.doc-body {
+  padding: 56px 0 96px;
+}
+.doc-toc {
+  position: sticky; top: 80px;
+}
+.doc-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.toc-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+.toc-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 13px;
+}
+.toc-list a {
+  display: flex;
+  gap: 10px;
+  color: var(--ink-3);
+  text-decoration: none;
+  line-height: 1.35;
+  padding: 2px 0;
+}
+.toc-list a:hover { color: var(--ink); }
+.toc-list .toc-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-4);
+  width: 22px;
+  flex: none;
+  padding-top: 1px;
+}
+
+section.sec {
+  padding: 20px 0 44px;
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: 96px;
+}
+section.sec:first-of-type { border-top: none; padding-top: 0; }
+
+.sec-head {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  align-items: baseline;
+  margin-bottom: 18px;
+}
+.sec-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  letter-spacing: 0.08em;
+  padding-top: 10px;
+  border-top: 1px solid var(--ink);
+  width: 48px;
+}
+.sec-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.15;
+}
+.sec-body {
+  padding-left: 76px;
+}
+.sec-body p {
+  margin: 0 0 14px;
+  color: var(--ink-2);
+  max-width: 64ch;
+  text-wrap: pretty;
+}
+.sec-body .sub-h {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--ink);
+  margin: 24px 0 8px;
+  letter-spacing: -0.005em;
+}
+.sec-body ul {
+  margin: 8px 0 18px;
+  padding: 0;
+  list-style: none;
+}
+.sec-body ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 6px;
+  color: var(--ink-2);
+  max-width: 64ch;
+}
+.sec-body ul li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 11px;
+  width: 10px; height: 1px;
+  background: var(--ink-3);
+}
+.sec-body code, .mono {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--tape);
+  padding: 1px 6px;
+  border-radius: 2px;
+}
+
+.callout {
+  margin: 10px 0 20px;
+  padding: 14px 18px;
+  background: var(--tape);
+  border-left: 2px solid var(--brand);
+  border-radius: 2px;
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+.callout strong { color: var(--ink); }
+
+/* FOOTER */
+.footer {
+  padding: 40px 0 32px;
+  background: var(--paper-2);
+  border-top: 1px solid var(--rule);
+}
+.footer-simple {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.footer-brand { max-width: 460px; }
+.footer-brand p { color: var(--ink-3); font-size: 14px; margin: 10px 0 0; }
+.footer-links {
+  display: flex; gap: 28px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+.footer-links a {
+  font-size: 14px;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.footer-links a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.footer-bottom {
+  display: flex; justify-content: space-between;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+@media (max-width: 860px) {
+  .doc-layout { grid-template-columns: 1fr; gap: 32px; }
+  .doc-toc { position: static; }
+  .sec-head { grid-template-columns: 1fr; gap: 6px; }
+  .sec-num { border-top: none; padding-top: 0; width: auto; }
+  .sec-body { padding-left: 0; }
+}
+@media (max-width: 560px) {
+  :root { --gutter: 20px; }
+  .doc-header { padding: 48px 0 32px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap-wide nav-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-mark"></div>
+      SHLV
+    </a>
+    <a class="back-link" href="index.html">← Back to home</a>
+  </div>
+</nav>
+
+<header class="doc-header">
+  <div class="wrap">
+    <div class="doc-kicker">Legal · Privacy</div>
+    <h1 class="doc-title">Privacy Policy.</h1>
+    <p class="doc-lede">
+      How SHLV collects, uses, and protects your data. Written in plain language first,
+      with the full legal detail below.
+    </p>
+    <div class="doc-meta">
+      <div>
+        Effective
+        <strong>April 24, 2026</strong>
+      </div>
+      <div>
+        Last updated
+        <strong>April 24, 2026</strong>
+      </div>
+      <div>
+        Version
+        <strong>1.0</strong>
+      </div>
+    </div>
+
+    <div class="summary">
+      <ul>
+        <li><strong>Your inventory stays on your phone.</strong> Items, photos, and shelves are stored locally. We don't upload them to our servers.</li>
+        <li><strong>Signing in is only for Pro.</strong> If you use Pro, we store your email and subscription status to verify your plan.</li>
+        <li><strong>Pro features send data to AI providers.</strong> When you use AI recognition or semantic search, the relevant images or text go to our backend and then to OpenAI.</li>
+        <li><strong>You can delete your account any time</strong> from inside the app. That removes your account and subscription data from our systems.</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main class="doc-body">
+  <div class="wrap">
+    <div class="doc-layout">
+
+      <aside class="doc-toc">
+        <div class="toc-title">Contents</div>
+        <ol class="toc-list">
+          <li><a href="#s1"><span class="toc-num">01</span><span>Introduction</span></a></li>
+          <li><a href="#s2"><span class="toc-num">02</span><span>Data we collect</span></a></li>
+          <li><a href="#s3"><span class="toc-num">03</span><span>How we use data</span></a></li>
+          <li><a href="#s4"><span class="toc-num">04</span><span>Third-party services</span></a></li>
+          <li><a href="#s5"><span class="toc-num">05</span><span>Data retention</span></a></li>
+          <li><a href="#s6"><span class="toc-num">06</span><span>Legal basis</span></a></li>
+          <li><a href="#s7"><span class="toc-num">07</span><span>Your rights</span></a></li>
+          <li><a href="#s8"><span class="toc-num">08</span><span>Data security</span></a></li>
+          <li><a href="#s9"><span class="toc-num">09</span><span>Children's privacy</span></a></li>
+          <li><a href="#s10"><span class="toc-num">10</span><span>Changes to this policy</span></a></li>
+          <li><a href="#s11"><span class="toc-num">11</span><span>Contact</span></a></li>
+        </ol>
+      </aside>
+
+      <article>
+
+        <section class="sec" id="s1">
+          <div class="sec-head">
+            <div class="sec-num">01</div>
+            <h2 class="sec-title">Introduction</h2>
+          </div>
+          <div class="sec-body">
+            <p>This Privacy Policy explains how SHLV (the "App") collects, uses, and protects your data.</p>
+            <p>The App is operated by an individual developer based in Bulgaria.</p>
+          </div>
+        </section>
+
+        <section class="sec" id="s2">
+          <div class="sec-head">
+            <div class="sec-num">02</div>
+            <h2 class="sec-title">Data we collect</h2>
+          </div>
+          <div class="sec-body">
+
+            <h3 class="sub-h">2.1 — Account data</h3>
+            <p>When you sign in with Google, we collect:</p>
+            <ul>
+              <li>Email address</li>
+              <li>Sign-in provider</li>
+            </ul>
+
+            <h3 class="sub-h">2.2 — Subscription data</h3>
+            <p>We store:</p>
+            <ul>
+              <li>Subscription status</li>
+              <li>Platform purchase token</li>
+            </ul>
+            <p>This data is stored in our backend via Supabase.</p>
+
+            <h3 class="sub-h">2.3 — User content</h3>
+            <ul>
+              <li>Inventory data — items, locations, images — is stored locally on your device.</li>
+              <li>We do not store this data on our servers.</li>
+            </ul>
+
+            <h3 class="sub-h">2.4 — AI processing data</h3>
+            <p>When you use Pro features:</p>
+            <ul>
+              <li>Images may be sent to Supabase Edge Functions and then to OpenAI for analysis.</li>
+              <li>Item data — names, tags, descriptions — may be sent for embedding and categorization.</li>
+            </ul>
+            <p>We do not store this content on our servers.</p>
+
+          </div>
+        </section>
+
+        <section class="sec" id="s3">
+          <div class="sec-head">
+            <div class="sec-num">03</div>
+            <h2 class="sec-title">How we use data</h2>
+          </div>
+          <div class="sec-body">
+            <p>We use your data to:</p>
+            <ul>
+              <li>Provide and operate the App.</li>
+              <li>Enable Pro features.</li>
+              <li>Improve AI functionality and performance.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sec" id="s4">
+          <div class="sec-head">
+            <div class="sec-num">04</div>
+            <h2 class="sec-title">Third-party services</h2>
+          </div>
+          <div class="sec-body">
+            <p>We use the following third-party service providers ("processors"):</p>
+            <ul>
+              <li><strong>Supabase</strong> — authentication, database, backend logic.</li>
+              <li><strong>OpenAI</strong> — AI processing (image and text analysis).</li>
+            </ul>
+            <p>These providers may process and temporarily store data according to their own policies.</p>
+          </div>
+        </section>
+
+        <section class="sec" id="s5">
+          <div class="sec-head">
+            <div class="sec-num">05</div>
+            <h2 class="sec-title">Data retention</h2>
+          </div>
+          <div class="sec-body">
+            <ul>
+              <li>Account and subscription data is retained while your account is active.</li>
+              <li>AI-related data may be temporarily retained by third-party providers.</li>
+              <li>We do not store your inventory data on our servers.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sec" id="s6">
+          <div class="sec-head">
+            <div class="sec-num">06</div>
+            <h2 class="sec-title">Legal basis</h2>
+          </div>
+          <div class="sec-body">
+            <p>Under the GDPR, we process your data based on:</p>
+            <ul>
+              <li>Performance of a contract — providing the App.</li>
+              <li>Legitimate interest — improving the service.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sec" id="s7">
+          <div class="sec-head">
+            <div class="sec-num">07</div>
+            <h2 class="sec-title">Your rights</h2>
+          </div>
+          <div class="sec-body">
+            <p>You have the right to:</p>
+            <ul>
+              <li>Access your data.</li>
+              <li>Request deletion of your data.</li>
+            </ul>
+            <p>You may delete your account at any time using the in-app feature.</p>
+            <div class="callout">
+              <strong>When you delete your account:</strong> your account data is deleted from Supabase.
+              Some data may remain temporarily in third-party logs.
+            </div>
+          </div>
+        </section>
+
+        <section class="sec" id="s8">
+          <div class="sec-head">
+            <div class="sec-num">08</div>
+            <h2 class="sec-title">Data security</h2>
+          </div>
+          <div class="sec-body">
+            <p>We take reasonable measures to protect your data. However, no system is completely secure.</p>
+          </div>
+        </section>
+
+        <section class="sec" id="s9">
+          <div class="sec-head">
+            <div class="sec-num">09</div>
+            <h2 class="sec-title">Children's privacy</h2>
+          </div>
+          <div class="sec-body">
+            <p>The App is not intended for children under 13.</p>
+          </div>
+        </section>
+
+        <section class="sec" id="s10">
+          <div class="sec-head">
+            <div class="sec-num">10</div>
+            <h2 class="sec-title">Changes to this policy</h2>
+          </div>
+          <div class="sec-body">
+            <p>We may update this Privacy Policy. Continued use of the App means you accept the changes.</p>
+          </div>
+        </section>
+
+        <section class="sec" id="s11">
+          <div class="sec-head">
+            <div class="sec-num">11</div>
+            <h2 class="sec-title">Contact</h2>
+          </div>
+          <div class="sec-body">
+            <p>Questions, requests, or concerns about this policy? Reach out.</p>
+            <p><a href="/cdn-cgi/l/email-protection#85ecf3e4ebabe9fcf0e7eae8ecf7eaf3abf5e4f3e9eaf3c5e2e8e4ece9abe6eae8"><span class="__cf_email__" data-cfemail="d6bfa0b7b8f8baafa3b4b9bbbfa4b9a0f8a6b7a0bab9a096b1bbb7bfbaf8b5b9bb">[email&#160;protected]</span></a></p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-simple">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <div class="brand-mark"></div>
+          SHLV
+        </a>
+        <p>A personal index for everything you own but never see. Stop hunting. Start finding.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="/cdn-cgi/l/email-protection#2b425d4a450547525e4944464259445d055b4a5d47445d6b4c464a424705484446">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SHLV</span>
+      <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbd2cddad595d7c2ced9d4d6d2c9d4cd95cbdacdd7d4cdfbdcd6dad2d795d8d4d6">[email&#160;protected]</a></span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
